@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="MageWorx\MageplazaBlogSeoCompatibility\Model\DataProviderFactory">
+        <arguments>
+            <argument name="map" xsi:type="array">
+                <item name="home" xsi:type="string">MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider\Home</item>
+                <item name="post" xsi:type="string">MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider\Post</item>
+                <item name="category" xsi:type="string">MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider\Category</item>
+                <item name="topic" xsi:type="string">MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider\Topic</item>
+                <item name="tag" xsi:type="string">MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider\Tag</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="MageWorx\MageplazaBlogSeoCompatibility\Model\Generator">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="home" xsi:type="string">home</item>
+                <item name="post" xsi:type="string">post</item>
+                <item name="category" xsi:type="string">category</item>
+                <item name="topic" xsi:type="string">topic</item>
+                <item name="tag" xsi:type="string">tag</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
