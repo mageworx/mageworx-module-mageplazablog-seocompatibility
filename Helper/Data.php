@@ -9,43 +9,42 @@ namespace MageWorx\MageplazaBlogSeoCompatibility\Helper;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\Store;
 
-
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
      * XML config path show Mageplaza Blog Pages
      */
-    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap_mageplaza_blog/add_blog_pages';
+    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/add_blog_pages';
 
     /**
      * XML config path add post pages
      */
-    const XML_PATH_ADD_POSTS = 'mageworx_seo/xml_sitemap_mageplaza_blog/add_posts';
+    const XML_PATH_ADD_POSTS = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/add_posts';
 
     /**
      * XML config path add categories pages
      */
-    const XML_PATH_ADD_CATEGORIES = 'mageworx_seo/xml_sitemap_mageplaza_blog/add_categories';
+    const XML_PATH_ADD_CATEGORIES = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/add_categories';
 
     /**
      * XML config path add tag pages
      */
-    const XML_PATH_ADD_TAGS = 'mageworx_seo/xml_sitemap_mageplaza_blog/add_tags';
+    const XML_PATH_ADD_TAGS = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/add_tags';
 
     /**
      * XML config path add topic pages
      */
-    const XML_PATH_TOPICS = 'mageworx_seo/xml_sitemap_mageplaza_blog/add_topics';
+    const XML_PATH_TOPICS = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/add_topics';
 
     /**
      * XML config path add author pages
      */
-    const XML_PATH_PRIORITY = 'mageworx_seo/xml_sitemap_mageplaza_blog/blog_pages_priority';
+    const XML_PATH_PRIORITY = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/blog_pages_priority';
 
     /**
      * XML config path add author pages
      */
-    const XML_PATH_CHANGEFREQ = 'mageworx_seo/xml_sitemap_mageplaza_blog/blog_pages_changefreq';
+    const XML_PATH_CHANGEFREQ = 'mageworx_seo/xml_sitemap/xml_sitemap_mageplaza_blog/blog_pages_changefreq';
 
     /**
      * @var int

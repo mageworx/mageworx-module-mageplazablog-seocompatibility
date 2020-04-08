@@ -27,7 +27,7 @@ class Home extends \MageWorx\MageplazaBlogSeoCompatibility\Model\DataProvider
         $this->helper->setStoreId($this->storeId);
 
         $generators[$code]['items'][] = [
-            'url_key'      => $this->mageplazaHelper->getBlogUrl(null, null, $this->storeId),
+            'url_key'      => $this->getUrlKey(null, null, $this->storeId),
             'date_changed' => date_format(date_create(), 'Y-m-d')
         ];
 

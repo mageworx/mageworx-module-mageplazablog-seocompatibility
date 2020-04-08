@@ -76,11 +76,7 @@ abstract class DataProvider implements DataProviderInterface
         $this->helper->setStoreId($this->storeId);
         foreach ($collection as $item) {
             $generators[$code]['items'][] = [
-                'url_key'      => $this->mageplazaHelper->getBlogUrl(
-                    $item,
-                    $type,
-                    $this->storeId
-                ),
+                'url_key'      => $this->getUrlKey($item, $type, $this->storeId),
                 'date_changed' => $this->getUpdatedDate($item)
             ];
         }
@@ -101,5 +97,25 @@ abstract class DataProvider implements DataProviderInterface
         }
 
         return date_format(date_create($date), 'Y-m-d');
+    }
+
+    /**
+     * @param mixed $urlKey
+     * @param mixed $type
+     * @param mixed $store
+     * @return string
+     */
+    protected function getUrlKey($urlKey = null, $type = null, $store = null)
+    {
+        if (is_object($urlKey)) {
+            $urlKey = $urlKey->getUrlKey();
+        }
+
+        $urlKey = ($type ? $type . '/' : '') . $urlKey;
+        $urlKey = $this->mageplazaHelper->getRoute($store) . '/' . $urlKey;
+        $urlKey = explode('?', $urlKey);
+        $urlKey = $urlKey[0];
+
+        return rtrim($urlKey, '/') . $this->mageplazaHelper->getUrlSuffix($store);
     }
 }

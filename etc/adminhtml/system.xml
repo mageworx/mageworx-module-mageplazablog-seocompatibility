@@ -14,51 +14,56 @@
             <label>SEO</label>
             <tab>mageworx</tab>
             <resource>MageWorx_XmlSitemap::config_xmlsitemap</resource>
-            <group id="xml_sitemap_mageplaza_blog" translate="label comment" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
-                <field id="add_posts" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Add Post Pages]]></label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
-                <field id="add_categories" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Add Category Pages]]></label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
-                <field id="add_tags" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Add Tag Pages]]></label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
-                <field id="add_topics" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Add Topic Pages]]></label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
-                <field id="blog_pages_changefreq" translate="label" type="select" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Frequency]]></label>
-                    <source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
-                    <comment><![CDATA[The general information to search bots about the crawling frequency. The <i>Always</i> means that the page will differ each time it's accessed. The <i>Never</i> is used for the archived URLs like some old blog posts. <br/><b>NOTE!</b> It's always up to search bot to decide when these pages should be recrawled.]]></comment>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
-                <field id="blog_pages_priority" translate="label comment" type="text" sortOrder="28" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Priority]]></label>
-                    <backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
-                    <comment><![CDATA[Sort the pages <b>on your store only</b> according to their importance. Won't affect your site rankings among other websites. Valid values range from 0.0 to 1.0.]]></comment>
-                    <depends>
-                        <field id="add_blog_pages">1</field>
-                    </depends>
-                </field>
+            <group id="xml_sitemap" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>XML Sitemap</label>
+                <comment><![CDATA[XML Sitemap helps the search bot index the pages including those that might have been ignored otherwise. An XML sitemap is written for the search bots (as opposed to the HTML Sitemap that is created for the real clients).]]></comment>
+                <frontend_model>MageWorx\XmlSitemap\Block\Adminhtml\System\Config\Information</frontend_model>
+                <group id="xml_sitemap_mageplaza_blog" translate="label comment" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="add_posts" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Post Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="add_categories" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Category Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="add_tags" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Tag Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="add_topics" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Topic Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="blog_pages_changefreq" translate="label" type="select" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Frequency]]></label>
+                        <source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
+                        <comment><![CDATA[The general information to search bots about the crawling frequency. The <i>Always</i> means that the page will differ each time it's accessed. The <i>Never</i> is used for the archived URLs like some old blog posts. <br/><b>NOTE!</b> It's always up to search bot to decide when these pages should be recrawled.]]></comment>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="blog_pages_priority" translate="label comment" type="text" sortOrder="28" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Priority]]></label>
+                        <backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
+                        <comment><![CDATA[Sort the pages <b>on your store only</b> according to their importance. Won't affect your site rankings among other websites. Valid values range from 0.0 to 1.0.]]></comment>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                </group>
             </group>
         </section>
     </system>
