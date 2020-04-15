@@ -9,13 +9,15 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <mageworx_seo>
-            <xml_sitemap_mageplaza_blog>
-                <add_posts>1</add_posts>
-                <add_categories>1</add_categories>
-                <add_tags>1</add_tags>
-                <add_topics>1</add_topics>
-                <blog_pages_priority>0.5</blog_pages_priority>
-            </xml_sitemap_mageplaza_blog>
+            <xml_sitemap>
+                <xml_sitemap_mageplaza_blog>
+                    <add_posts>1</add_posts>
+                    <add_categories>1</add_categories>
+                    <add_tags>1</add_tags>
+                    <add_topics>1</add_topics>
+                    <blog_pages_priority>0.5</blog_pages_priority>
+                </xml_sitemap_mageplaza_blog>
+            </xml_sitemap>
         </mageworx_seo>
     </default>
 </config>
