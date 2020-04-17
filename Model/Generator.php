@@ -52,11 +52,11 @@ class Generator
      */
     public function generate($storeId, $excludeMetaRobots)
     {
+        $this->helper->setStoreId($storeId);
+
         if (!$this->helper->isBlogPagesEnabled()) {
             return [];
         }
-
-        $this->helper->setStoreId($storeId);
 
         $generators = [];
         $arguments  = ['storeId' => $storeId, 'excludeMetaRobots' => $excludeMetaRobots];
